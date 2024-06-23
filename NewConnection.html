@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for New Light Connection - E-Bill Application</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f0e6f4, #d0bddd, #a888c6);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .navbar {
+            background-color: #6a1b9a;
+        }
+
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: white !important;
+        }
+
+        .footer {
+            background-color: #6a1b9a;
+            color: white;
+            padding: 10px 0;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 40px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        .btn{
+            background-color: #6a1b9a;
+            color: aliceblue;
+            border-radius: 40px;
+        }
+
+        
+        .btn:hover{
+            background-color: #732d91;
+            border-color: #732d91;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand fs-4" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="30" fill="currentColor"
+                        class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                    <b>E-Bill Application</b>
+                </a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="payment.html">Pay Bills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="History.html">View History</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="NewConnection.html">Apply for New Connections</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="feedbackcomplaint.html">Feedback and Complaint</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="alerts.html">Alerts</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Profile
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" id="logoutBtn" href="#">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container w-50 p-4">
+        <h1 class="text-center mt-4 justify-content-center">Apply for New Light Connection</h1>
+        <form id="newConnectionForm" class="mt-4">
+            <div class="row">
+                <div class="col-md-12 mt-3">
+                    <h2>Personal Information</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="fullName" class="form-label">Full Name:</label>
+                    <input type="text" class="form-control" id="fullName" name="fullName" pattern="[A-Za-z\s]{1,50}"
+                        required>
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="phone" class="form-label">Phone Number:</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{10}" required>
+                </div>
+                <div class="col-md-6 mt-2">
+                    <label for="aadharFile" class="form-label">Upload Aadhar Card (PDF, JPG, PNG):</label>
+                    <input type="file" class="form-control" id="aadharFile" name="aadharFile"
+                        accept=".pdf, .jpg, .jpeg, .png" required>
+                    <small class="text-muted">Please upload a PDF, JPG, or PNG file.</small>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 mt-4">
+                    <h2>Address Information</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <label for="address" class="form-label">Address:</label>
+                    <input type="text" class="form-control" id="address" name="address" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="city" class="form-label">City:</label>
+                    <input type="text" class="form-control" id="city" name="city" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="state" class="form-label">State:</label>
+                    <input type="text" class="form-control" id="state" name="state" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="zip" class="form-label">ZIP Code:</label>
+                    <input type="text" class="form-control" id="zip" name="zip" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="country" class="form-label">Country:</label>
+                    <select class="form-control" id="country" name="country" required>
+                        <option value="" disabled selected>Select your country</option>
+                        <option value="India">India</option>
+                        <option value="United States">United States</option>
+                        <option value="Canada">Canada</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="Australia">Australia</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 mt-4">
+                    <h2>Connection Details</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="connectionType" class="form-label">Connection Type:</label>
+                    <select class="form-control" id="connectionType" name="connectionType" required>
+                        <option value="" disabled selected>Select connection type</option>
+                        <option value="Residential">Residential</option>
+                        <option value="Commercial">Commercial</option>
+                        <option value="Industrial">Industrial</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="loadRequirement" class="form-label">Load Requirement (in kW):</label>
+                    <input type="number" class="form-control" id="loadRequirement" name="loadRequirement" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="preferredDate" class="form-label">Preferred Connection Date:</label>
+                    <input type="date" class="form-control" id="preferredDate" name="preferredDate" required>
+                </div>
+                
+            </div>
+            <button type="submit" class="btn mt-4">Submit Application</button>
+            <button type="reset" class="btn mt-4">Reset</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center mt-4 fixed-bottom">
+        <p>&copy; 2024 E-Bill Application. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="NewConnection.js"></script>
+</body>
+
+</html>
